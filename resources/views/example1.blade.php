@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Example 1 con Tailwind v3</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <title>Example 1 con Tailwind v3</title>
 
-        <!-- Styles -->
-        @vite('resources/css/app.css')
-    </head>
-    <body class="antialiased">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    @vite('resources/css/app.css')
+</head>
+
+<body class="antialiased">
+    {{--  
+        Se agrega la clase mx-auto para centrar el contenedor, 
+        pero si se desea que la clase container por defecto 
+        centre el contenedor, se debe agregar dicha clase en el archivo
+        tailwind.config.js que se encuentra en la raiz del proyecto. 
+    --}}
+    <div class="container">
         <h1> -- ESTE ES UN TEXTO DENTRO DE H1 --</h1>
         <h2> -- ESTE ES UN TEXTO DENTRO DE H2 --</h2>
         <h3> -- ESTE ES UN TEXTO DENTRO DE H3 --</h3>
         <h4> -- ESTE ES UN TEXTO DENTRO DE H4 --</h4>
         <h5> -- ESTE ES UN TEXTO DENTRO DE H5 --</h5>
         <h6> -- ESTE ES UN TEXTO DENTRO DE H6 --</h6>
+    </div>
+    <hr class="text-color-blue" height="2px"/>
+</body>
 
-    </body>
 </html>
