@@ -16,8 +16,8 @@
 </head>
 
 <body class="antialiased">
-    <div class="mb-4">
-        <h1 class="text-center"> {{$title}}</h1>        
+    <div class="mb-4 bg-orange-200">
+        <h1 class="text-center p-4 font-bold text-3xl text-orange-800"> {{$title}}</h1>        
     </div>
     <div class="container">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-3">

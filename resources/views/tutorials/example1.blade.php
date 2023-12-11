@@ -17,8 +17,8 @@
 
 <body class="antialiased"> 
 
-    <div class="mb-4">
-        <h1 class="text-center"> {{$title}}</h1>        
+    <div class="mb-4 bg-blue-200">
+        <h1 class="text-center p-4 font-bold text-3xl text-blue-800"> {{$title}}</h1>        
     </div>
     <div class="container">
         <h1> -- ESTE ES UN TEXTO DENTRO DE H1 --</h1>

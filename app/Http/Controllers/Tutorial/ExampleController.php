@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ExampleController extends Controller
 {
     public function example1(){
-        $title = "Nro. 1 Class Container";
+        $title = "Nro. 1 Container | Contenedor";
         /*
             Se agrega la clase mx-auto para centrar el contenedor, 
             pero si se desea que la clase container por defecto 
@@ -16,11 +16,11 @@ class ExampleController extends Controller
             tailwind.config.js que se encuentra en la raiz del proyecto. 
          */
 
-         return view('example1', compact('title'));
+         return view('tutorials.example1', compact('title'));
     }
 
     public function example2(){
-        $title = "Nro. 2 El Grid";
+        $title = "Nro. 2 Grid | Grilla";
         /*
             Cuando se necesita trabajar con grid (layouts), se debe considerar:
             1.- Utilizar un elemento div con la clase container donde se va a estructurar la grid.
@@ -41,11 +41,11 @@ class ExampleController extends Controller
                 - grid-rows-* : para establecer el numero de filas que formará la grilla.
                 - row-span-* : para establecer el numero de filas que ocupara la celda donde se aplica.
          */
-        return view('example2', compact('title'));
+        return view('tutorials.example2', compact('title'));
     }
 
     public function example3(){
-        $title = "Nro. 3 Aspect Ratio";
+        $title = "Nro. 3 Aspect Ratio | Relación Aspecto";
         /*
             Cuando se necesita trabajar o establecer la relación de ancho y alto de un elemento,
             tal como las imagenes o video, tailwind proporciona una clase helper denominada
@@ -62,6 +62,20 @@ class ExampleController extends Controller
                 aspect-[4/3]:       aspect-ratio: 4 / 3;
                 aspect-[12/5]:      aspect-ratio: 12 / 5;
          */
-        return view('example3', compact('title'));
+        return view('tutorials.example3', compact('title'));
+    }
+
+    public function example4(){
+        $title = "Nro. 4 Columns | Columnas";
+        /*
+            Cuando se utiliza la clase columns, esta utilidad permite agrupar los elementos
+            en columnas basandose en el nro. de columnas establecidas, similar al grid pero
+            en este caso no es muy ordenada. No solo sirve para las imagenes tambien para establecer 
+            ordenamiento en los textos.
+
+            Con la utilidad break-after-column, despues de una columna realizara un salto o break y asi 
+            evitar que el texto de un parrafo se divida inneserariamente
+         */
+        return view('tutorials.example4', compact('title'));
     }
 }

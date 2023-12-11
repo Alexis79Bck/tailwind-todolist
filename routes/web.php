@@ -16,9 +16,13 @@ use App\Http\Controllers\Tutorial\ExampleController;
 
 Route::view('/', 'welcome');
 
-Route::get('/example1', [ExampleController::class, 'example1']);
-Route::get('/example2', [ExampleController::class, 'example2']);
-Route::get('/example3', [ExampleController::class, 'example3']);
+Route::prefix('tutorials')->group(function () {
+    Route::get('/example1', [ExampleController::class, 'example1']);
+    Route::get('/example2', [ExampleController::class, 'example2']);
+    Route::get('/example3', [ExampleController::class, 'example3']);
+    Route::get('/example4', [ExampleController::class, 'example4']);
+});
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
