@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Tutorial\ExampleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome');
-Route::view('/example1', 'example1');
+
+Route::get('/example1', [ExampleController::class, 'example1']);
+Route::get('/example2', [ExampleController::class, 'example2']);
+Route::get('/example3', [ExampleController::class, 'example3']);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

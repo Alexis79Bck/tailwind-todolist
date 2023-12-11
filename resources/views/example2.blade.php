@@ -15,20 +15,21 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased"> 
-
+<body class="antialiased">
     <div class="mb-4">
         <h1 class="text-center"> {{$title}}</h1>        
     </div>
     <div class="container">
-        <h1> -- ESTE ES UN TEXTO DENTRO DE H1 --</h1>
-        <h2> -- ESTE ES UN TEXTO DENTRO DE H2 --</h2>
-        <h3> -- ESTE ES UN TEXTO DENTRO DE H3 --</h3>
-        <h4> -- ESTE ES UN TEXTO DENTRO DE H4 --</h4>
-        <h5> -- ESTE ES UN TEXTO DENTRO DE H5 --</h5>
-        <h6> -- ESTE ES UN TEXTO DENTRO DE H6 --</h6>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-3">
+            <div class="bg-blue-500 text-center sm:col-span-2 md:col-span-3 lg:col-span-4 "> A </div>
+            <div class="bg-teal-500 text-center"> B </div>
+            <div class="bg-purple-500 text-center"> C </div>
+            <div class="bg-rose-500 text-center"> D </div>
+            <div class="bg-yellow-700 text-center"> E </div>
+            <div class="bg-green-400 text-center"> F </div>
+        </div>
     </div>
-    
+
 </body>
 
 </html>

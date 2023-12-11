@@ -15,20 +15,11 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased"> 
-
+<body class="antialiased">
     <div class="mb-4">
         <h1 class="text-center"> {{$title}}</h1>        
     </div>
-    <div class="container">
-        <h1> -- ESTE ES UN TEXTO DENTRO DE H1 --</h1>
-        <h2> -- ESTE ES UN TEXTO DENTRO DE H2 --</h2>
-        <h3> -- ESTE ES UN TEXTO DENTRO DE H3 --</h3>
-        <h4> -- ESTE ES UN TEXTO DENTRO DE H4 --</h4>
-        <h5> -- ESTE ES UN TEXTO DENTRO DE H5 --</h5>
-        <h6> -- ESTE ES UN TEXTO DENTRO DE H6 --</h6>
-    </div>
-    
+
 </body>
 
 </html>
