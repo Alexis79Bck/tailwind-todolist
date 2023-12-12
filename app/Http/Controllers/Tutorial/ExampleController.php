@@ -65,4 +65,12 @@ class ExampleController extends Controller
             evitar que el texto de un parrafo se divida inneserariamente.";
         return view('tutorials.example4', compact('title', 'blockquote'));
     }
+    public function example5(){
+        $title = "Nro. 5 Display";
+        $blockquote = "Esta utilidad permite cambiar el comportamiento del display de un elemento.
+                        Las etiquetas <p>,<blockquote>,<div> ocupa su espacio en forma de bloque. 
+                        Mientras que la etiqueta <span>,<a>,<i> solo ocupa el espacio minimo necesario 
+                        para visualizar su contenido.";
+        return view('tutorials.example5', compact('title', 'blockquote'));
+    }
 }
