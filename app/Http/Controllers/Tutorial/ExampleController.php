@@ -9,20 +9,16 @@ class ExampleController extends Controller
 {
     public function example1(){
         $title = "Nro. 1 Container | Contenedor";
-        /*
-            Se agrega la clase mx-auto para centrar el contenedor, 
-            pero si se desea que la clase container por defecto 
-            centre el contenedor, se debe agregar dicha clase en el archivo
-            tailwind.config.js que se encuentra en la raiz del proyecto. 
-         */
-
-         return view('tutorials.example1', compact('title'));
+        $blockquote = "La clase container (contenedor), es la clase mas básica para encasillar los 
+            elementos que se dispondrá dentro de él. La clase mx-auto permite centrar el contenedor, 
+            pero si se desea que la clase container por defecto centre el contenedor, se debe agregar dicha clase en el archivo
+            tailwind.config.js que se encuentra en la raiz del proyecto.";
+         return view('tutorials.example1', compact('title','blockquote'));
     }
 
     public function example2(){
         $title = "Nro. 2 Grid | Grilla";
-        /*
-            Cuando se necesita trabajar con grid (layouts), se debe considerar:
+        $blockquote = "Cuando se necesita trabajar con grid (layouts), se debe considerar:
             1.- Utilizar un elemento div con la clase container donde se va a estructurar la grid.
             2.- El segundo div debe tener la clase grid para indicar que los elementos se dividiran en columnas.
             3.- Para crear la estructura responsiva, se debe emplear prefijos de breakpoints:
@@ -39,43 +35,34 @@ class ExampleController extends Controller
                 - col-start-* : Esta clase indicara a partir de cual columna iniciara la celda, segun el numero de columnas
                                 establecida.
                 - grid-rows-* : para establecer el numero de filas que formará la grilla.
-                - row-span-* : para establecer el numero de filas que ocupara la celda donde se aplica.
-         */
-        return view('tutorials.example2', compact('title'));
+                - row-span-* : para establecer el numero de filas que ocupara la celda donde se aplica.";
+        return view('tutorials.example2', compact('title','blockquote'));
     }
 
     public function example3(){
         $title = "Nro. 3 Aspect Ratio | Relación Aspecto";
-        /*
+        $blockquote = "
             Cuando se necesita trabajar o establecer la relación de ancho y alto de un elemento,
             tal como las imagenes o video, tailwind proporciona una clase helper denominada
             aspect ratio (relación de aspecto), esta utilidad controla la relación de aspecto de un elemento.
-            Las 3 clases que se encuentra en tailwind son
-                Clases               Propiedades
-            aspect-auto	        aspect-ratio: auto;
-            aspect-square	    aspect-ratio: 1 / 1;
-            aspect-video	    aspect-ratio: 16 / 9;
+            Las 3 clases que se encuentra en tailwind son: aspect-auto	---> aspect-ratio: auto;
+            aspect-square  ---> aspect-ratio: 1 / 1; aspect-video  --->  aspect-ratio: 16 / 9;
 
             Si se desea utilizar una relación de aspecto no definida en las clases anteriores, se puede realizar 
-            de la siguiente forma: aspect-[ancho/alto]
-                    Ejemplo
-                aspect-[4/3]:       aspect-ratio: 4 / 3;
-                aspect-[12/5]:      aspect-ratio: 12 / 5;
-         */
-        return view('tutorials.example3', compact('title'));
+            de la siguiente forma: aspect-[ancho/alto]. Por ejemplo:
+                aspect-[4/3]:       aspect-ratio: 4 / 3;  aspect-[12/5]:      aspect-ratio: 12 / 5;";
+         return view('tutorials.example3', compact('title','blockquote'));
     }
 
     public function example4(){
         $title = "Nro. 4 Columns | Columnas";
-        /*
-            Cuando se utiliza la clase columns, esta utilidad permite agrupar los elementos
+        $blockquote = "Cuando se utiliza la clase columns, esta utilidad permite agrupar los elementos
             en columnas basandose en el nro. de columnas establecidas, similar al grid pero
             en este caso no es muy ordenada. No solo sirve para las imagenes tambien para establecer 
             ordenamiento en los textos.
 
             Con la utilidad break-after-column, despues de una columna realizara un salto o break y asi 
-            evitar que el texto de un parrafo se divida inneserariamente
-         */
-        return view('tutorials.example4', compact('title'));
+            evitar que el texto de un parrafo se divida inneserariamente.";
+        return view('tutorials.example4', compact('title', 'blockquote'));
     }
 }

@@ -19,7 +19,13 @@
     <div class="mb-4 bg-stone-600">
         <h1 class="text-center p-4 font-bold text-3xl text-stone-100"> {{ $title }}</h1>
     </div>
-
+    <div class="container mx-auto">
+        <blockquote class="p-4 my-4 border-s-4 border-stone-300 bg-stone-50 dark:border-stone-500 dark:bg-stone-800">
+            <p class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-stone-100">
+                {{ $blockquote }}
+            </p>
+        </blockquote>
+    </div>
     <div class="container mx-auto py-12">
         <div class="columns-4">
             <img src="https://random.imagecdn.app/320/200" alt="">

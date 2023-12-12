@@ -19,7 +19,13 @@
     <div class="mb-4 bg-amber-200">
         <h1 class="text-center p-4 font-bold text-3xl text-amber-800"> {{$title}}</h1>        
     </div>
-
+    <div class="container mx-auto">
+        <blockquote class="p-4 my-4 border-s-4 border-amber-300 bg-amber-50 dark:border-amber-500 dark:bg-amber-800">
+            <p class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">
+                {{ $blockquote }}
+            </p>
+        </blockquote>
+    </div>
     <div class="container mx-auto py-12">
         <div class="grid grid-cols-3 gap-6">
             <div class="col-span-2">
