@@ -73,4 +73,12 @@ class ExampleController extends Controller
                         para visualizar su contenido.";
         return view('tutorials.example5', compact('title', 'blockquote'));
     }
+    public function example6(){
+        $title = "Nro. 6 Tipografía";
+        $blockquote = "Esta utilidad permite cambiar el comportamiento del texto a mostrar.
+                        Tailwind contiene muchas opciones que permite personalizar ampliamente
+                        las carateristicas del texto a mostrar como por ejemplo la familia de fuentes,
+                        el tamaño, el peso, la decoracion. ver mas en: https://tailwindcss.com/docs/font-family";
+        return view('tutorials.example6', compact('title', 'blockquote'));
+    }
 }

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+    @apply mb-5 font-sans text-4xl font-bold;
+}
+
+p {
+    @apply mb-5 font-serif text-lg leading-relaxed
+}
+
+li {
+    @apply font-mono text-sm italic
+}
