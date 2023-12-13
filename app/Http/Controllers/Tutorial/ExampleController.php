@@ -7,13 +7,29 @@ use Illuminate\Http\Request;
 
 class ExampleController extends Controller
 {
+    protected $tutorialsPagePath = 'tutorials.pages';
+
+    public function index(){
+
+        $links = [
+            'example1',
+            'example2',
+            'example3',
+            'example4',
+            'example5',
+            'example6',
+            'example7',
+        ];
+         
+        return view('tutorials.index', compact('links'));
+    }
     public function example1(){
         $title = "Nro. 1 Container | Contenedor";
         $blockquote = "La clase container (contenedor), es la clase mas básica para encasillar los 
             elementos que se dispondrá dentro de él. La clase mx-auto permite centrar el contenedor, 
             pero si se desea que la clase container por defecto centre el contenedor, se debe agregar dicha clase en el archivo
             tailwind.config.js que se encuentra en la raiz del proyecto.";
-         return view('tutorials.example1', compact('title','blockquote'));
+         return view($this->tutorialsPagePath . '.example1', compact('title','blockquote'));
     }
 
     public function example2(){
@@ -36,7 +52,7 @@ class ExampleController extends Controller
                                 establecida.
                 - grid-rows-* : para establecer el numero de filas que formará la grilla.
                 - row-span-* : para establecer el numero de filas que ocupara la celda donde se aplica.";
-        return view('tutorials.example2', compact('title','blockquote'));
+        return view($this->tutorialsPagePath . '.example2', compact('title','blockquote'));
     }
 
     public function example3(){
@@ -51,7 +67,7 @@ class ExampleController extends Controller
             Si se desea utilizar una relación de aspecto no definida en las clases anteriores, se puede realizar 
             de la siguiente forma: aspect-[ancho/alto]. Por ejemplo:
                 aspect-[4/3]:       aspect-ratio: 4 / 3;  aspect-[12/5]:      aspect-ratio: 12 / 5;";
-         return view('tutorials.example3', compact('title','blockquote'));
+         return view($this->tutorialsPagePath . '.example3', compact('title','blockquote'));
     }
 
     public function example4(){
@@ -63,7 +79,7 @@ class ExampleController extends Controller
 
             Con la utilidad break-after-column, despues de una columna realizara un salto o break y asi 
             evitar que el texto de un parrafo se divida inneserariamente.";
-        return view('tutorials.example4', compact('title', 'blockquote'));
+        return view($this->tutorialsPagePath . '.example4', compact('title', 'blockquote'));
     }
     public function example5(){
         $title = "Nro. 5 Display";
@@ -71,7 +87,7 @@ class ExampleController extends Controller
                         Las etiquetas <p>,<blockquote>,<div> ocupa su espacio en forma de bloque. 
                         Mientras que la etiqueta <span>,<a>,<i> solo ocupa el espacio minimo necesario 
                         para visualizar su contenido.";
-        return view('tutorials.example5', compact('title', 'blockquote'));
+        return view($this->tutorialsPagePath . '.example5', compact('title', 'blockquote'));
     }
     public function example6(){
         $title = "Nro. 6 Tipografía";
@@ -79,6 +95,15 @@ class ExampleController extends Controller
                         Tailwind contiene muchas opciones que permite personalizar ampliamente
                         las carateristicas del texto a mostrar como por ejemplo la familia de fuentes,
                         el tamaño, el peso, la decoracion. ver mas en: https://tailwindcss.com/docs/font-family";
-        return view('tutorials.example6', compact('title', 'blockquote'));
+        return view($this->tutorialsPagePath . '.example6', compact('title', 'blockquote'));
+    }
+
+    public function example7(){
+        $title = "Nro. 7 Background";
+        $blockquote = "Esta utilidad permite estilizar el fondo de un elemento a mostrar.
+                        Tailwind contiene muchas opciones que permite personalizar ampliamente
+                        las carateristicas del background a mostrar como por ejemplo la familia de fuentes,
+                        el tamaño, el peso, la decoracion. ver mas en: https://tailwindcss.com/docs/font-family";
+        return view($this->tutorialsPagePath . '.example7', compact('title', 'blockquote'));
     }
 }

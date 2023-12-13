@@ -17,6 +17,7 @@ use App\Http\Controllers\Tutorial\ExampleController;
 Route::view('/', 'welcome');
 
 Route::prefix('tutorials')->group(function () {
+    Route::get('/', [ExampleController::class, 'index']);
     Route::get('/example1', [ExampleController::class, 'example1']);
     Route::get('/example2', [ExampleController::class, 'example2']);
     Route::get('/example3', [ExampleController::class, 'example3']);
