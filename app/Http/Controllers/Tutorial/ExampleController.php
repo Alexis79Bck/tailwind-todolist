@@ -100,10 +100,16 @@ class ExampleController extends Controller
 
     public function example7(){
         $title = "Nro. 7 Background";
-        $blockquote = "Esta utilidad permite estilizar el fondo de un elemento a mostrar.
+        $blockquote = "Esta utilidad permite estilizar el fondo (background) de un elemento.
                         Tailwind contiene muchas opciones que permite personalizar ampliamente
-                        las carateristicas del background a mostrar como por ejemplo la familia de fuentes,
-                        el tamaño, el peso, la decoracion. ver mas en: https://tailwindcss.com/docs/font-family";
+                        dicha carateristica del background, como por ejemplo:
+                        * bg-<color>-<tonalidad>: donde, <color> es el nombre del color a utilizar
+                             dentro de la lista por defecto, tales como: Slate, Gray, Zinc, Neutral, 
+                             entre otros. Asi como las tonalidades (50, 100, 200, 300, 400 ... 900, 950). 
+                             La lista completa se  encuentra en: https://tailwindcss.com/docs/customizing-colors
+                         * bg-<size>: donde <size> representa alguno de los modificadores: auto, cover o contain.
+                         * bg-<position>: donde <position> representa alguna de las posiciones: Top, bottom
+                             left, right, center. Asi como las esquinas.";
         return view($this->tutorialsPagePath . '.example7', compact('title', 'blockquote'));
     }
 }

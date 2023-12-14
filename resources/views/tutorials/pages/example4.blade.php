@@ -1,17 +1,14 @@
 @extends('tutorials.layouts.base')
 
 @section('title')
+<x-volver-button /> 
     <div class="mb-4 bg-stone-600">
-        <h1 class="text-center p-4 font-bold text-3xl text-stone-100"> {{ $title }}</h1>
+        <x-titulo-h1 :texto="$title" colorTexto="text-stone-100" /> 
     </div>
 @endsection
 
 @section('blockquote')
-    <blockquote class="p-4 my-4 border-s-4 border-stone-300 bg-stone-50 dark:border-stone-500 dark:bg-stone-800">
-        <p class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-stone-100">
-            {{ $blockquote }}
-        </p>
-    </blockquote>
+    <x-comentario-blockquote :texto="$blockquote" />
 @endsection
 
 @section('content')

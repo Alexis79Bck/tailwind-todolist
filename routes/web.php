@@ -24,6 +24,7 @@ Route::prefix('tutorials')->group(function () {
     Route::get('/example4', [ExampleController::class, 'example4']);
     Route::get('/example5', [ExampleController::class, 'example5']);
     Route::get('/example6', [ExampleController::class, 'example6']);
+    Route::get('/example7', [ExampleController::class, 'example7']);
 });
 
 
