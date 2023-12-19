@@ -19,6 +19,7 @@ class ExampleController extends Controller
             'example5',
             'example6',
             'example7',
+            'example8',
         ];
          
         return view('tutorials.index', compact('links'));
@@ -111,5 +112,20 @@ class ExampleController extends Controller
                          * bg-<position>: donde <position> representa alguna de las posiciones: Top, bottom
                              left, right, center. Asi como las esquinas.";
         return view($this->tutorialsPagePath . '.example7', compact('title', 'blockquote'));
+    }
+
+    public function example8(){
+        $title = "Nro. 8 Background";
+        $blockquote = "Esta utilidad permite estilizar los bordes (borders) de un o mas elementos.
+                        Tailwind contiene muchas opciones que permite personalizar ampliamente
+                        dicha carateristica de bordes, como por ejemplo:
+                        * border-<color>-<tonalidad>: donde, <color> es el nombre del color a utilizar
+                             dentro de la lista por defecto, tales como: Slate, Gray, Zinc, Neutral, 
+                             entre otros. Asi como las tonalidades (50, 100, 200, 300, 400 ... 900, 950). 
+                             La lista completa se  encuentra en: https://tailwindcss.com/docs/customizing-colors
+                         * border-<size>: donde <size> representa el grosor y sus modificadores son: 2, 4 o 8.
+                         * border-<direction: t, l, b, r>: donde <direction> representa las 4 direcciones: 
+                                top (t), bottom (b), left (l), right (r).";
+        return view($this->tutorialsPagePath . '.example8', compact('title', 'blockquote'));
     }
 }

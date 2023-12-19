@@ -9,7 +9,7 @@
 @section('content')
 
 
-<div class="grid sm:grid-cols-1 md:grid-cols-3  lg:grid-cols-6  gap-4">
+<div class="mx-6 grid sm:grid-cols-1 md:grid-cols-3  lg:grid-cols-6  gap-4">
     @foreach ($links as $link)
     <div>
         <a href="{{ url('tutorials/' . $link)}}" class="block p-6 bg-stone-200 border border-gray-600 rounded-lg shadow-lg shadow-zinc-700 hover:shadow-blue-700/50">
